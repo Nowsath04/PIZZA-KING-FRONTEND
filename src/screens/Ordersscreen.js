@@ -29,7 +29,7 @@ export default function Ordersscreen() {
               <div
                 className="col-md-8 m-2 p-1"
                 data-aos="fade-down"
-                style={{ backgroundColor: "#228B22", color: "white" }}
+                style={{ backgroundColor: "#0d6efd", color: "white" }}
               >
                 <div className="flex-container">
                   <div className="text-left w-100 m-1">
