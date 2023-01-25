@@ -17,6 +17,7 @@ export default function Checkout({ subtotal }) {
     dispatch(placeOrder(token, subtotal));
   }
 
+  
   return (
     <div>
       {loading && <Loading />}
