@@ -12,53 +12,55 @@ export default function Navbar() {
   return (
     <div>
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
-      <div className="container-fluid">
         <a className="navbar-brand" href="/">
-        PIZZA KING 🍕
+          PIZZA KING 🍕
+          <img
+            src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/pizza_1f355.png"
+            className="img-fluid"
+            style={{ height: "35px" }}
+            alt=""
+          />
         </a>
         <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-          <span className="navbar-toggler-icon"></span>
+          className="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon">
+            <i style={{ color: "black" }} className="fas fa-bars"></i>
+          </span>
         </button>
         <div
           className="collapse navbar-collapse justify-content-end"
           id="navbarNav"
         >
-          <ul className="navbar-nav ms-auto">
+          <ul className="navbar-nav ml-auto">
             {currentUser ? (
-              <>
-              <li className="nav-item mr-3">
-              <a className="nav-link" href="/admin" style={{ color: "black" }}>
-                Admin
-              </a>
-            </li>
-              <div className="dropdown mt-2 mr-3">
-                
+              <div className="dropdown mt-2 ml-2">
                 <a
                   style={{ color: "black" }}
                   className="dropdown-toggle"
                   type="button"
-                  id="dropdownMenuButton1"
+                  id="dropdownMenuButton"
                   data-toggle="dropdown"
                   aria-haspopup="true"
                   aria-expanded="false"
-
                 >
                   {currentUser.name}
                 </a>
                 <div
                   className="dropdown-menu"
-                  aria-labelledby="dropdownMenuButton1"
+                  aria-labelledby="dropdownMenuButton"
                 >
                   <a className="dropdown-item" href="/orders">
                     Orders
+                  </a>
+                  <a className="dropdown-item" href="/admin">
+                    Admin
                   </a>
                   <a
                     className="dropdown-item"
@@ -71,30 +73,19 @@ export default function Navbar() {
                   </a>
                 </div>
               </div>
-          </>  ) : (
-<>
-              <li className="nav-item mr-3">
-              <a className="nav-link" href="/Home" style={{ color: "black" }}>
-                Home
-              </a>
-             
-            </li>
-
-              <li className="nav-item mr-3" >
-                <a className="nav-link" href="/login" style={{ color: "black" }}>
+            ) : (
+              <li className="nav-item">
+                <a className="nav-link" href="/login">
                   Login
                 </a>
               </li>
-              </>
             )}
-            
-            <li className="nav-item ">
-              <a className="nav-link" href="/cart" style={{ color: "black" }}>
+            <li className="nav-item">
+              <a className="nav-link" style={{ color: "black" }} href="/cart">
                 Cart {cartstate.cartItems.length}
               </a>
             </li>
           </ul>
-        </div>
         </div>
       </nav>
     </div>
