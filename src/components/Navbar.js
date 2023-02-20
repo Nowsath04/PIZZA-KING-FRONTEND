@@ -13,11 +13,11 @@ export default function Navbar() {
     <div>
       <nav className="navbar navbar-expand-lg shadow-lg p-3 mb-5 bg-white rounded">
         <a className="navbar-brand" href="/">
-          PIZZA KING 🍕
+          PIZZA KING
           <img
-            src="https://emojipedia-us.s3.amazonaws.com/source/skype/289/pizza_1f355.png"
+            src="https://tse1.mm.bing.net/th?id=OIP.jZp8LnsjZSctobKpGf8j-QHaHa&pid=Api&P=0"
             className="img-fluid"
-            style={{ height: "35px" }}
+            style={{ height: "35px", paddingLeft: "10px" }}
             alt=""
           />
         </a>
@@ -75,7 +75,11 @@ export default function Navbar() {
               </div>
             ) : (
               <li className="nav-item">
-                <a className="nav-link" href="/login">
+                <a
+                  className="nav-link"
+                  style={{ color: "black" }}
+                  href="/login"
+                >
                   Login
                 </a>
               </li>
